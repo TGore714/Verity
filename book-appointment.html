@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <!-- Link to the new CSS file for the Appointment page -->
+    <link rel="stylesheet" href="book-appointment.css">
+</head>
+<body>
+    <header>
+        <h1>Book Your Appointment</h1>
+        <p>Fill out the form below to schedule your polygraph test.</p>
+    </header>
+
+    <section class="appointment-form">
+        <form action="#" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Preferred Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Submit Appointment Request</button>
+        </form>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verity Polygraph Services LLC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!--font for the header name-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dhurjati&display=swap" rel="stylesheet">
+    <!--font for the about us section-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Dhurjati&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="logo dhurjati-regular">Verity Polygraph Services LLC</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#booking">Book an Appointment</a></li>
+                </ul>
+                 <!-- Hamburger menu icon for mobile -->
+                 <div class="hamburger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Your Trusted Polygraph Experts</h2>
+            <p>Confidential, reliable, and accurate polygraph services for individuals and businesses</p>
+            <a href="#contact" class="cta-btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Corporate Screenings</h3>
+                    <p>Pre-employment screenings and background checks for businesses.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Investigative Testing</h3>
+                    <p>Polygraph testing for investigations and disputes.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Private Testing</h3>
+                    <p>Confidential polygraph services for individuals seeking truth verification.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Custom Solutions</h3>
+                    <p id="booking">Tailored packages designed to meet your specific needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book-appointment">
+        <h2>Ready to Book Your Appointment?</h2>
+        <p>Click below to schedule your polygraph test. We're here to help!</p>
+        <a href="book-appointment.html" class="cta-link">
+            <button class="cta-button">Book an Appointment</button>
+        </a>
+    </section>
+    
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-text abel-regular">
+                <h3>Our Mission</h3>
+                <p>At <strong>Verity Polygraph Services LLC</strong>, we specialize in providing confidential and professional polygraph testing services to individuals, businesses, and organizations. Our certified examiner guarantees the highest level of accuracy and integrity with every test.</p>
+                <p>Whether it's pre-employment screening, criminal investigations, or personal matters, we are here to help you make informed decisions and find the truth you need.</p>
+                <p>We value trust, confidentiality, and professionalism, and we are committed to providing results you can rely on, delivered with respect and discretion.</p>
+            </div>
+            <div class="about-image">
+                <img src="data:image/jpeg;base64,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" alt="Polygraph Test in Progress">
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+    
+        <div class="faq-item">
+            <h3>What is a polygraph test, and how does it work?</h3>
+            <p>A polygraph test, commonly known as a lie detector test, measures physiological responses such as heart rate, blood pressure, respiration, and skin conductivity while a person answers questions. By analyzing these responses, polygraph examiners assess truthfulness.</p>
+        </div>
+    
+        <div class="faq-item">
+            <h3>Are polygraph tests accurate?</h3>
+            <p>Polygraph tests are highly accurate when conducted by trained professionals. However, no test can be 100% accurate. Polygraph results are typically used as supportive evidence rather than definitive proof of truthfulness.</p>
+        </div>
+    
+        <div class="faq-item">
+            <h3>How long does a polygraph test take?</h3>
+            <p>The entire process generally takes between 1 to 2 hours. This includes a pre-test interview, the polygraph test itself, and a post-test discussion of the results.</p>
+        </div>
+    
+        <div class="faq-item">
+            <h3>Are the results of a polygraph test admissible in court?</h3>
+            <p>In many jurisdictions, polygraph test results may not be admissible in court. It is advised to consult with legal counsel to understand how polygraph evidence may apply to your specific case.</p>
+        </div>
+    
+        <div class="faq-item">
+            <h3>Can nervousness affect the test results?</h3>
+            <p>While everyone may experience some level of nervousness, a trained polygraph examiner is skilled at distinguishing normal anxiety from responses that indicate deception.</p>
+        </div>
+    
+        <div class="faq-item">
+            <h3>Who will see my polygraph results?</h3>
+            <p>Your results are kept confidential and shared only with the individuals you authorize. Verity Polygraph Services LLC takes privacy and confidentiality very seriously.</p>
+        </div>
+    
+        <div class="faq-item">
+            <h3>What should I do to prepare for a polygraph test?</h3>
+            <p>Get a good night’s sleep, avoid excessive caffeine, and try to stay calm. The examiner will provide additional instructions prior to the test.</p>
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Verity Polygraph Services LLC | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+/* JavaScript to toggle visibility of answers */
+<script>
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+        const question = item.querySelector("h3");
+
+        question.addEventListener("click", function () {
+            // Toggle the open class to show or hide the answer
+            item.classList.toggle("open");
+        });
+    });
+});
+
+
+// Function to toggle the navigation menu
+function toggleMenu() {
+    const navLinks = document.querySelector('header nav ul');
+    navLinks.classList.toggle('active');  // Toggle the 'active' class to show/hide the menu
+}
+
+
+
+
+
+</script>

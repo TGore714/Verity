@@ -1,0 +1,616 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ff4d4d;
+}
+
+
+/* Base Styles for Navbar */
+header nav {
+    position: relative; /* Ensure the positioning of child elements is relative to the nav */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;  /* Horizontal layout on desktop */
+    justify-content: center;
+    margin-top: 10px;
+    padding-left: 0;
+    transition: all 0.3s ease;  /* Smooth transition for menu */
+}
+
+header nav ul li {
+    margin: 0 20px;
+    transition: all 0.3s ease;  /* Smooth transition for list items */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;  /* Smooth hover color and transform effects */
+}
+
+header nav ul li a:hover {
+    color: #ff4d4d;
+    transform: translateY(-3px);  /* Slight hover effect */
+}
+
+/* For Mobile (Below 768px) */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;  /* Hide the navigation menu by default on mobile */
+        position: absolute;
+        top: 60px;  /* Position it below the header */
+        left: 0;  /* Align the menu with the left side of the screen */
+        background-color: #333;
+        width: 100%;
+        flex-direction: column;  /* Stack the links vertically */
+        gap: 1rem;
+        padding: 1rem 0;  /* Space the items out vertically */
+        border-radius: 8px;  /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Drop shadow for depth */
+        transform: translateY(-20px);  /* Start menu off-screen */
+        transition: transform 0.3s ease, opacity 0.3s ease;  /* Smooth transition */
+    }
+
+    header nav ul.active {
+        display: flex;  /* Show the menu when active */
+        transform: translateY(0);  /* Slide in the menu smoothly */
+        opacity: 1;  /* Fade in the menu */
+    }
+
+    header nav ul li {
+        margin: 0;  /* Remove the horizontal margin on mobile */
+        text-align: center;
+        opacity: 0;  /* Start items as invisible */
+        animation: fadeIn 0.5s ease-in-out forwards;  /* Fade in items one by one */
+    }
+
+    header nav ul li:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+    header nav ul li:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+    header nav ul li:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    header nav .hamburger {
+        display: block;  /* Show hamburger on small screens */
+        position: absolute;
+        top: 20px;
+        left: 10px;  /* Position it off to the left */
+        background-color: transparent;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 100;  /* Ensure it's on top */
+    }
+}
+
+/* Animation for fading in items */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+#home {
+    height: 100vh;
+    background-image: url('https://rdctd.pro/wp-content/uploads/How-to-Beat-a-Polygraph-Test-Lie-Detector-Guide-DETCADER-p-1.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#home .hero {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+#home h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #e04343;
+}
+
+#services {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #f0f0f0;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ff4d4d;
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+#contact {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+form input, form textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.submit-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #e04343;
+}
+
+footer {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.dhurjati-regular {
+    font-family: "Dhurjati", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  #faq {
+    padding: 3rem;
+    background-color: #f4f7fc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+#faq h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0073e6;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.faq-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h3 {
+    font-size: 1.5rem;
+    color: #0073e6;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.faq-item h3:hover {
+    color: #005bb5;
+}
+
+.faq-item p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.faq-item.open p {
+    max-height: 1000px; /* Arbitrary large number */
+    opacity: 1;
+}
+
+.faq-item.open {
+    border-left: 4px solid #0073e6;
+}
+
+/* Add smooth animation to the FAQ section */
+.faq-item h3 {
+    position: relative;
+}
+
+.faq-item h3::after {
+    content: '\002B'; /* Plus sign */
+    font-size: 1.5rem;
+    color: #0073e6;
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open h3::after {
+    content: '\2212'; /* Minus sign */
+    transform: rotate(90deg);
+}
+
+
+#about {
+    background-color: #f4f7fc;
+    padding: 4rem 2rem;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: 5rem auto;
+    transition: all 0.3s ease-in-out;
+}
+
+#about:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #0073e6;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#about h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    padding-right: 2rem;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+}
+
+.about-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.abel-regular {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+/* Style for the "Book an Appointment" section */
+#book-appointment {
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, #0073e6, #00b3b3); /* Gradient background */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 4rem auto;
+    max-width: 700px;
+    color: white;
+    animation: fadeIn 2s ease-out; /* Animation effect */
+}
+
+#book-appointment h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#book-appointment p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.cta-button {
+    background-color: #ff7f50; /* Vibrant coral color */
+    color: white;
+    font-size: 1.2rem;
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.cta-button:hover {
+    background-color: #ff6347; /* Lighter coral on hover */
+    transform: translateY(-5px); /* Button "lifts" up on hover */
+}
+
+.cta-link {
+    text-decoration: none; /* Remove underline from link */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+
+
+/* Responsive Styles */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2.5rem; /* Smaller title font size */
+    }
+    .squiggle-line {
+        width: 60px; /* Smaller squiggle line */
+    }
+    header#home {
+        padding: 15px 0; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Phones (480px and below) */
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 2rem; /* Even smaller title font size */
+    }
+    .squiggle-line {
+        width: 50px; /* Further reduced squiggle line */
+    }
+    header#home {
+        padding: 10px 0; /* Further reduce padding for small phones */
+    }
+
+    /* Example: make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Body text adjustments for readability on smaller screens */
+    body {
+        font-size: 1rem; /* Base font size for mobile */
+        line-height: 1.5; /* Improve readability on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #book-appointment h2 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+    }
+}
+
+
+/* Hamburger Menu Button */
+.hamburger {
+    display: none; /* Initially hidden, shown on mobile */
+    cursor: pointer;
+    padding: 15px;
+    background-color: #ff4d4d; /* Circular background color */
+    border-radius: 50%; /* Make the background circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow to make it pop */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.hamburger:hover {
+    background-color: #ff7f50; /* Change color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Bar styling */
+.hamburger .bar {
+    width: 25px; /* Bar width */
+    height: 3px; /* Bar height */
+    background-color: black; /* Set the bars to black by default */
+    margin: 5px auto; /* Center the bars */
+    transition: all 0.3s ease; /* Smooth transition for bar rotation */
+}
+
+/* Show hamburger button on mobile screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show button on mobile */
+    }
+}
+
+.hamburger:hover .bar {
+    background-color: white; /* Change bar color to white on hover */
+}
